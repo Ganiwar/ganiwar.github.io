@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"><title></title>
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js"></script>
+<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css" rel="stylesheet">
+
+</head>
+
+<body>
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+<style>
+.points {text-color:#C0F}
+  #fly {
+        display: block;
+        position: relative;
+        margin: 0px auto;
+        width: 50%;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background: #ee8a65;
+    }
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+		color: #F3F;
+		font-style:italic;
+    }
+</style>
+<div id="map"></div>
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ3lhbmVzaCIsImEiOiJjaXJ3cnpwZ2gwMDBwMnNud3I5MmNxN29oIn0.CXGdx9XLcMeWevzxK9tNQA';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/gyanesh/cisqwi95w001h2yjxjvxt3gdd',
+zoom: 5,
+center: [173.151,-41.049]
+});
+
+map.on('load', function () {
+map.addSource('greatwalks-41tqx6', {
+type: 'vector',
+url: 'mapbox://gyanesh.14ofvewr'
+});
+map.addLayer({
+"id": "greatwalks-41tqx6",
+"type": "line",
+"source": "greatwalks-41tqx6",
+"source-layer": "greatwalks-41tqx6",
+"layout": {
+"line-join": "round",
+"line-cap": "round"
+},
+"paint": {
+"line-color": "#ff69b4",
+"line-width": 1
+}
+});
+});
+	    
+map.on('load', function () {
+    map.addSource("points", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [176.98508977890015,-38.79245971258673]
+                },
+                "properties": {
+				"description": "<strong>Lake Waikaremoana Walk</strong><p><a href=\http://www.doc.govt.nz/waikaremoana </a> Trace the shoreline of Lake Waikaremoana, the 'sea of rippling waters.' Pass giant podocarp trees and remote beaches, and enjoy breathtaking views from Panekire Bluff.</p>",
+                    "title": "Lake Waikaremoana Walk",
+                    "icon": ""
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [175.50384521484372,-39.25777815028334]
+                },
+                "properties": {
+					"description": "<strong>Round the Mountain Track</strong><p><a href=\http://www.doc.govt.nz/roundthemountain </a> The Round the Mountain Track showcases the varied volcanic landscapes and alpine vegetation on the flanks of the active volcano Mount Ruapehu. It's a more remote alternative to the Tongariro Northern Circuit Great Walk.</p>",				
+                    "title": "Round the Mountain Track",
+                    "icon": ""
+                }
+            },
+			{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [175.02593994140625,-39.42346418978382]
+                },
+                "properties": {
+					"description": "<strong>Whanganui River</strong><p><a href=\http://www.newzealand.com/int/feature/whanganui-journey/ </a> Take a walk down the Whanganui River, by foot or canoe. This memorable trip flows through a wildly beautiful national park.</p>",
+                    "title": "Whanganui River",
+                    "icon": ""
+                }
+            },
+			{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [173.0449676513672,-40.87043006899355]
+                },
+                "properties": {
+					"description": "<strong>Abel Tasman Coast Track</strong><p><a href=\http://www.doc.govt.nz/abeltasmantrack </a> Blessed with a mild climate, golden beaches and lush coastal native bush, the Abel Tasman Coast Track has it all.</p>",
+                    "title": "Abel Tasman Coast Track",
+                    "icon": ""
+                }
+            },
+			{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [ 172.15164184570312,-40.93322773476865]
+                },
+                "properties": {
+					"description": "<strong>Heaphy Track</strong><p><a href=\http://www.doc.govt.nz/heaphytrack </a> Travel through expansive tussock downs, lush forests and nīkau palms to the roaring seas of the West Coast.</p>",
+                    "title": "Heaphy Track",
+                    "icon": ""
+                }
+            },
+			{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [168.1732177734375,-44.72722302245741]
+                },
+                "properties": {
+					"description": "<strong>Routeburn Track</strong><p><a href=\http://www.doc.govt.nz/routeburntrack </a> This is the ultimate alpine adventure, weaving through meadows, reflective tarns and alpine gardens. You'll be rewarded with spectacular vistas over vast mountain ranges and valleys.</p>",
+                    "title": "Routeburn Track",
+                    "icon": ""
+                }
+            },
+			{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [167.79247283935544,-44.828604269555676]
+                },
+                "properties": {
+					"description": "<strong>Milford Track</strong><p><a href=\http://www.doc.govt.nz/milfordtrack </a> Experience 'the finest walk in the world' as you retrace the steps of early explorers on the world-renowed Milford Track. Take a journey along valleys carved by glaciers, wander through ancient rainforests and admire cascading waterfalls.</p>",
+                    "title": "Milford Track",
+                    "icon": ""
+                }
+            },
+			{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [167.65411376953125,-45.40495853820097]
+                },
+                "properties": {
+					"description": "<strong>Kepler Track</strong><p><a href=\http://www.doc.govt.nz/keplertrack </a> The Kepler Track has a lot of challenging and complex avalanche terrain. Avalanches are frequent. There are 9 avalanche paths, some of which may bring avalanche debris to the valley floor and have the potential to cross the track.</p>",
+                    "title": "Kepler Track",
+                    "icon": ""
+                }
+            },
+			{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [168.05614471435547,-46.853617401905105]
+                },
+                "properties": {
+					"description": "<strong>Rakirua Track</strong><p><a href=\http://www.doc.govt.nz/rakiuratrack </a> The circuit follows open coastline, crosses forested interior and meanders along the sheltered shores of Paterson Inlet. It passes sites of historical interest and introduces many of the common sea and forest birds of the island. Parts of it cross Maori land and access is courtesy of the owners.</p>",
+                    "title": "Rakirua Track",
+                    "icon": "",
+					}
+            }]
+        }
+    });
+
+    map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": "points",
+        "layout": {
+            "icon-image": "star-15",
+            "text-field": "{title}",
+			"text-size" : 10,
+            "text-font" : ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+						
+        }
+    });
+	var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+map.on('mousemove', function(e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
+  
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popup.remove();
+        return;
+    }
+
+    var feature = features[0];
+   
+    popup.setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+map.on('click', function(e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
+  
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popup.remove();
+        return;
+    }
+
+    var feature = features[0];
+   
+    popup.setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+map.on('click', function (e) {
+ var features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
+ if (features.length) {
+ map.flyTo({center: features[0].geometry.coordinates, zoom: 9});
+ }
+   var feature = features[0];
+   
+    popup.setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+});
+</script>
+</body></html>
