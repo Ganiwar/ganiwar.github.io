@@ -1,0 +1,66 @@
+@charset "utf-8";
+.Nav nav a {
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-right: 10%;
+	padding-top: 0px;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-size: 150%;
+	text-align: right;
+}
+.Nav nav #Homepagelink {
+	color: #000000;
+}
+.Nav nav #Lab5Link {
+	background-color: #4E3B3B;
+	color: #FFFFFF;
+	
+}
+tbody tr th {
+}
+
+.Header {
+	padding-top: 4%;
+}
+
+
+
+.Nav nav a:hover {
+	border-bottom: thin solid #DF1014;
+	background-color: #4E3B3B;
+}
+tbody tr #text {
+	color: #000000;
+	background-color: #C9CEC3;
+	font-size: large;
+	text-align: center;
+	font-style: italic;
+}
+
+tbody tr .Header {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-style: italic;
+	font-size: 250%;
+	color: #000000;
+}
+#Container {
+	background-image: url(images/Trees_1400x900-1024x658.png);
+
+
+
+}
+
+tbody tr .Subheading {
+	color: #22B720;
+	font-size: 200%;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+
+}
+th .Nav nav {
+
+}
+.firstmap {
+}
+
